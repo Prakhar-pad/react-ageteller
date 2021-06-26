@@ -1,7 +1,9 @@
 import React,{Component} from 'react';
 import {Form, FormControl, Button} from 'react-bootstrap';
 import './App.css';
-import AgeStats from './AgeStats'
+import AgeStats from './AgeStats';
+import partyPopper from '../assets/party-popper.jpg'
+
 
 
 class App extends Component{
@@ -10,12 +12,16 @@ class App extends Component{
 
         this.state={
             newDate: '',
-            birthday:'1976-07-12'
+            birthday:'1976-07-12',
+            showStats: false
         }
     }
 
     changeBirthday(){
-        this.setState({birthday: this.state.newDate});
+        this.setState({
+            birthday: this.state.newDate,
+            showStats: true
+        });
     }
 
 
@@ -33,7 +39,14 @@ class App extends Component{
                     <Button onClick={()=>this.changeBirthday()}>
                         Submit
                     </Button>
+                    {
+                      this.state.showStats ?
+                    <div className='fade age-stats'> 
                     <AgeStats date={this.state.birthday}/>
+                    </div>
+                    : <div></div>
+                    }
+
                 </Form>
             </div>
         )
