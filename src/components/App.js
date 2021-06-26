@@ -2,8 +2,6 @@ import React,{Component} from 'react';
 import {Form, FormControl, Button} from 'react-bootstrap';
 import './App.css';
 import AgeStats from './AgeStats';
-import partyPopper from '../assets/party-popper.jpg'
-
 
 
 class App extends Component{
