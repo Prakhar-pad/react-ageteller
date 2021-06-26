@@ -5,7 +5,7 @@ import './App.css';
 class App extends Component{
     render(){
         return(
-            <div classNames='App'>
+            <div className='App'>
                 <Form inline>
                     <h2>Input Your Birthday!</h2>
                     <FormControl type="date">
